@@ -1,0 +1,28 @@
+/* ALG0.cpp : définit le point d'entrée pour l'application console.
+*/
+
+#include "stdafx.h"
+#include "iostream"
+
+float c = 10000;																												//variable à virgule flottante (float) (tout nombre réel)
+int n = 0;																														//variable de nombre entier
+int w = 0;																														//variable de nombre entier
+
+int _tmain(int argc, _TCHAR* argv[])																							//constructeur de la méthode d'éxécution par défaut du programme (généré auto)
+{
+	std::cout << "Pressez une touche pour lancer l'algorithme" << std::endl;													//affiche la suite de caractères entre guillemets puis change de ligne
+	std::cin.get();																												//attend que l'utilisateur presse une touche quelconque puis poursuit l'execution
+	std::cout<< "=-=-=-=-=-=-=-=-=-=-=" << std::endl;																			
+    std::cout << " - Année " << n << " - Compte en banque " << c << " - Argent retiré " << w << " -" << std::endl;				//affichage de la valeur des trois variables dans une suite de caractères
+    while(c > 0)																												//boucle tant que la valeur de "c" est supérieure à 0
+    {                                       
+        n=n+1;																													//n prend la valeur n+1
+        c=1.04*c-500;																											//c prend la valeur 1.04*c-500
+        w=w+500;																												//w prend la valeur w+500
+        std::cout << " - Année " << n << " - Compte en banque " << c << " - Argent retiré " << w << " -" << std::endl;          //affiche affichage de la valeur des trois variables dans une suite de caractères pour chaque année
+    }                                       
+    std::cout << "=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;																
+    std::cout << "Pressez une touche pour fermer le programme" << std::endl;
+	std::cin.get();
+	return 0;																													//la méthode par défaut est de type int et doit retourner une valeur de type int (entier), par défaut 0.
+}
