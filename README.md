@@ -1,4 +1,4 @@
-Algorithmes
+Algorithme DM1 Cours suites.
 ====
 
 ALGORITHME DM1:
